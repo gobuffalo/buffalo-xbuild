@@ -20,7 +20,7 @@ var debug bool
 
 var xbuildCmd = &cobra.Command{
 	Use:   "xbuild",
-	Short: "A brief description of your command",
+	Short: "Builds a Buffalo binary, including bundling of assets (packr & webpack) - experimental",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		ctx, cancel := sigtx.WithCancel(context.Background(), os.Interrupt)
 		defer cancel()
