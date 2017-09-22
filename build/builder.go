@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/gobuffalo/packr/builder"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )
@@ -57,6 +58,7 @@ func (b *Builder) Run() error {
 }
 
 func (b *Builder) Cleanup() error {
+	builder.Clean(b.Root)
 	me := multiError{}
 	for _, c := range b.cleanups {
 		err := c()
