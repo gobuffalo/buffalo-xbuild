@@ -73,4 +73,6 @@ func init() {
 	xbuildCmd.Flags().BoolVarP(&options.Static, "static", "s", false, "build a static binary using  --ldflags '-linkmode external -extldflags \"-static\"'")
 	xbuildCmd.Flags().StringVar(&options.LDFlags, "ldflags", "", "set any ldflags to be passed to the go build")
 	xbuildCmd.Flags().BoolVarP(&options.Debug, "debug", "d", false, "print debugging information")
+	xbuildCmd.Flags().BoolVarP(&options.Compress, "compress", "c", true, "compress static files in the binary")
+
 }

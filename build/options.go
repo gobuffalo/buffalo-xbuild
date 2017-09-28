@@ -11,6 +11,7 @@ type Options struct {
 	Tags          []string
 	Static        bool
 	Debug         bool
+	Compress      bool
 }
 
 func (o Options) String() string {

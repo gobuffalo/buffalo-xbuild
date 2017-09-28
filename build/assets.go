@@ -18,6 +18,7 @@ func (b *Builder) buildAssets() error {
 	}
 
 	p := pack.New(b.ctx, b.Root)
+	p.Compress = b.Compress
 
 	if b.ExtractAssets {
 		p.IgnoredBoxes = append(p.IgnoredBoxes, "../public/assets")
